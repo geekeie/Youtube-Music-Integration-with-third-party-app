@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Music Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Search YouTube Music</h1>
+        <form method="post">
+            <input type="text" name="query" placeholder="Enter song or artist">
+            <button type="submit">Search</button>
+        </form>
+        {% if results %}
+            <h2>Results:</h2>
+            <ul>
+            {% for item in results['items'] %}
+                <li>
+                    <a href="https://www.youtube.com/watch?v={{ item['id']['videoId'] }}">
+                        {{ item['snippet']['title'] }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
