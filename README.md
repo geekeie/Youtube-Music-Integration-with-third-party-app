@@ -6,7 +6,7 @@ This project demonstrates how to integrate YouTube Music search functionality us
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/youtube-music-integration.git
+    git clone https://github.com/geekeie/Youtube-Music-Integration-with-third-party-app.git
     cd youtube-music-integration
     ```
 
